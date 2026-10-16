@@ -6,4 +6,11 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "fastapi[standard]==0.136.3",
+    "pydantic>=2.14.1",
 ]
+
+[tool.pyright]
+venvPath = "../.."
+venv = ".venv"
+pythonVersion = "3.14"
+extraPaths = ["../../.venv/Lib/site-packages"]

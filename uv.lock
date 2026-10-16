@@ -921,10 +921,14 @@ version = "0.1.0"
 source = { virtual = "apps/web-service" }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },
+    { name = "pydantic" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "fastapi", extras = ["standard"], specifier = "==0.136.3" }]
+requires-dist = [
+    { name = "fastapi", extras = ["standard"], specifier = "==0.136.3" },
+    { name = "pydantic", specifier = ">=2.14.1" },
+]
 
 [[package]]
 name = "websockets"
