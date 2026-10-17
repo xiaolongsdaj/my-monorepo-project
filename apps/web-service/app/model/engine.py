@@ -3,8 +3,9 @@ from sqlalchemy.ext.asyncio import AsyncEngine, create_async_engine
 from app.core.config import db_settings
 
 _engine: AsyncEngine | None = None
-
-
+import os
+print("当前工作目录:", os.getcwd())
+print("DB settings:", db_settings.model_dump())
 def get_engine() -> AsyncEngine:
     global _engine
 
