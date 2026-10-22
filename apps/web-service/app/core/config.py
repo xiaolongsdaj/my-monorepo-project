@@ -3,7 +3,7 @@ from pydantic_settings import BaseSettings
 
 class _BaseSettingsWithEnv(BaseSettings):
     # 配置读取方式
-    model_config = {"env_file": ".env","extra":"ignore"}  # env文件的位置
+    model_config = {"env_file": ".env", "extra": "ignore"}  # env文件的位置
 
 
 # 通用配置
@@ -22,7 +22,7 @@ class _WebSettings(_BaseSettingsWithEnv):
 # 数据库配置
 class _DBSettings(_BaseSettingsWithEnv):
     host: str = ""
-    port: int = 0
+    port: str = ""
     name: str = ""
     user: str = ""
     password: str = ""
